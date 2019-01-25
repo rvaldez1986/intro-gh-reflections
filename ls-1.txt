@@ -1,0 +1,48 @@
+VERSION CONTROL
+(On cmd prompt, windows)
+C:\Users\rober\Desktop>FC game_new.js game_old.js
+Output of file compare
+
+(on git bash) 
+go to downloads and compare versions
+diff -u game_old.js game_new.js
+The – sign shows what was eliminated from the old to the new (left to right). The + shows what was added.
+
+we edit on C:\Users\rober\bash_profile so we type subl and we run sublime from bash.
+
+In this directory:
+
+/c/Users/rober/desktop/Master in CS/PRE MASTER
+
+We create the working folders as requested
+
+mkdir version-control
+cd version-control
+mkdir reflections
+cd reflections
+subl lesson_1_reflections.txt
+
+
+
+git init ==> intialize git
+
+git commit ==> Saved version of code
+git log ==> history of commits (commits have ids)
+git diff ==> difference between commits [old] [new]
+
+Git makes you do manual commits. The advantage is that with good judgment you can save when it is just right.
+The disadvantages is that if you forget it could be costly.
+
+git log --stat ==> history of commits as before but output stats of changes as well
+git clone ==> clone repository (files + files history)
+git config --global color.ui auto ==> change color to show green and red in additions/deletions
+
+in log commit changes go upward, new commits added on top of old ones
+git checkout [commit id] ==> restore commit to previous to changes
+this changes the repository to look like when a different commit was made. "Detached head state"
+
+git checkout branch ==> returns to initial state previous checkouts
+
+
+
+

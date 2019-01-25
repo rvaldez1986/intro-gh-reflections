@@ -1,0 +1,9 @@
+VERSION CONTROL
+Repositories have hidden files (metadata) to keep previous states. This files start with a dot (this is why we do not see it).
+ls ==> list files and directories 
+ls -a ==> gives us all files including hidden
+
+git init ==> starts a new repository on location
+git status ==> show files changed since last commit (kidof git log)
+
+git add ==> add files from working directory to staging area
