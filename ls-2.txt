@@ -1,9 +1,88 @@
 VERSION CONTROL
 Repositories have hidden files (metadata) to keep previous states. This files start with a dot (this is why we do not see it).
+
 ls ==> list files and directories 
 ls -a ==> gives us all files including hidden
 
 git init ==> starts a new repository on location
 git status ==> show files changed since last commit (kidof git log)
 
-git add ==> add files from working directory to staging area
+git add [filename] ==> add files from working directory to staging area
+
+git commit ==> start a commit for files added 					in staging area, how to do 					if vim editor opens:
+
+Insert Mode (Insert appears at the bottom): write commit message.
+
+Press scape (Esc) to exit insert mode and then write :x and enter to exit
+
+reminder git diff [old] [new] to see diferences
+
+Staging area is the copy of the most recent commits untill I add changes to it
+
+git diff ==> with no arguments show us the difference between the staging area and the working directore, so it shows us what changes we have made from the last commit to our working file (now) that we have not made a commit yet.
+
+git diff --staged ==> shows us the difference between the stage area and the repository so its a good way to analize what we are going to commit
+
+git reset --hard ==> resets any changes in the working directory or the stage area. Be very carefull, you may loose changes that have not been commited. 
+
+We want to create branches to the master branch.
+
+git branch ==> see all the branches (* marks current branch)
+git branch [name of branch] ==> create a branch named [name of branch]
+git checkout [branch name] ==> the same as commits, this command allow as to work in a specified branch
+
+Idea have a master (always working branch). Branch for development
+
+Remote branch: Branch that somebody else created
+
+git log --graph --oneline [branches] ==> shows graph of branches in file, ex: git log --graph --oneline master coins
+
+Reachability (each commit stores its parent)
+Head points to most recent commit
+
+If we checkout a commit not head of a branch, we are in a detached head state, meaning that that commit is unreachable if we checkout any branch. 
+
+To avoid previous we can create a branch for this commit and give it a name.
+So in code it would be:
+git checkout [commit]
+git branch [name of branch]
+git checkout [name of branch]
+
+But there is a shortcut to this three commands:
+
+git checkout -b [new branch name] [commit] ==> creates a new branch on the commit ex: git checkout -b test-branch fd..code of commit
+
+Merge:
+git merge [master] [branch] ==> merge between master and other branch ex: git merge master coins
+
+git show [commit] ==> gives the difference between commit and its parent (without specifying the parent)
+
+git branch -d [branch] ==> deleates branch, if it is in the main path just the branch name not the commit (reachable by master) ex: git branch -d test-branch
+
+CONFLICT:
+git config --global merge.conflictstyle diff3 ==> run this code to see conflicts how they are supposed to be seen (as explained in udacity)
+
+(Note) if we want to merge master into a different branch we checkout that branch and merge from there
+ex: git merge master easy-mode #on easymode branch we want to put everything of master to the easy mode.
+
+Output of ex divided in three sections:
+
+<<<<<<< HEAD
+
+(1) Code corresponding to the current branch (ex easy-mode) 
+
+||||||| merged common ancestors
+
+(2) Original version that both started
+
+=======
+  
+(3) Code included in the other branch (ex master branch)    
+
+
+>>>>>>> master
+
+
+
+
+

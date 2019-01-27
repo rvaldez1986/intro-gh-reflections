@@ -27,18 +27,24 @@ subl lesson_1_reflections.txt
 git init ==> intialize git
 
 git commit ==> Saved version of code
-git log ==> history of commits (commits have ids)
-git diff ==> difference between commits [old] [new]
+git log ==> history of commits (commits have
+			 ids)
+
+git diff [old] [new] ==> difference between 						 commits [old] vs [new]
 
 Git makes you do manual commits. The advantage is that with good judgment you can save when it is just right.
 The disadvantages is that if you forget it could be costly.
 
 git log --stat ==> history of commits as before but output stats of changes as well
+
 git clone ==> clone repository (files + files history)
+
 git config --global color.ui auto ==> change color to show green and red in additions/deletions
 
 in log commit changes go upward, new commits added on top of old ones
+
 git checkout [commit id] ==> restore commit to previous to changes
+
 this changes the repository to look like when a different commit was made. "Detached head state"
 
 git checkout branch ==> returns to initial state previous checkouts
