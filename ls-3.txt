@@ -1,0 +1,11 @@
+Remote Branch:
+
+git remote ==> output the current remote branches that are being used
+
+git remote add [name of branch] ==> creates a remote branch ex:git remote add origin https://github.com/rvaldez1986/intro-gh-reflections.git created a remote branch called origin that is connceted to the branch intro-gh-reflections.git in my github account online.
+
+git push [remote branch] [branch] ==> command that copies the branch local on my computer to the remote branch ex: git push origin master pushes the content of the local master branch to the origin branch created in command above.
+
+==============================
+This part was not commited localy but directed first to github online 
+
